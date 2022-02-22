@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 //import React,{Fragment} from "react";
 
 
-const  PrimeraApp = ({saludo = 'Hola Mundo'}) => {
+const  PrimeraApp = ({saludo, subtitulo = 'soy un subtitulo'}) => {
 
     return(
         <>
          <h1>{saludo}</h1>
          {/*<pre>{JSON.stringify(saludo, null, 3)}</pre>*/}
-         <p>Mi primera aplicacion </p>
+         <p>{subtitulo}</p>
         </>
     );
 
@@ -17,6 +17,10 @@ const  PrimeraApp = ({saludo = 'Hola Mundo'}) => {
 
 PrimeraApp.prototype = {
     saludo: PropTypes.string.isRequired
+}
+
+PrimeraApp.defaultProps ={
+    subtitulo: 'soy un subtitulo'
 }
 
 export default PrimeraApp;
