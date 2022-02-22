@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 const  PrimeraApp = ({saludo, subtitulo = 'soy un subtitulo'}) => {
-
+     
     return(
         <>
          <h1>{saludo}</h1>
@@ -19,7 +19,7 @@ PrimeraApp.prototype = {
     saludo: PropTypes.string.isRequired
 }
 
-PrimeraApp.defaultProps ={
+PrimeraApp.defaultProps = {
     subtitulo: 'soy un subtitulo'
 }
 
